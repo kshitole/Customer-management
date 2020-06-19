@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h1>Customers</h1>
+  <hr />
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-customer-operations (customerCreated)="createOrUpdateCustomer($event)" [customer]="currentCustomer"></app-customer-operations>
+    </div>
+    <div class="col-md-8">
+      <app-customers [selectedCustomer]="customer" (editRecord)="editClicked($event)" (newRecord)="newClicked($event)" (deleteRecord)="deleteClicked($event)"></app-customers>
+    </div>
+  </div>
+</div>
+

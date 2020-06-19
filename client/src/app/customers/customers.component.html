@@ -1,0 +1,27 @@
+<!--<p>
+  customers works!
+</p>
+<a href="customers.component.html">customers.component.html</a>-->
+
+<a href="#" id="new-button">New</a>
+<table width="80%">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email Id</th>
+      <th>Phone No</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customerData ">
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.emailId }}</td>
+      <td>{{ customer.phoneNo }}</td>
+      <td>
+        <a href="#" (click)="editRecord(this)">Edit</a> &nbsp;
+        <a href="#" (click)="deleteRecord(this)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
